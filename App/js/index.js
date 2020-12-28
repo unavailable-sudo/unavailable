@@ -28,7 +28,17 @@ xui.Class('App', 'xui.Module',{
                 .setTop("31.238095238095237em")
                 .setCaption("Log In")
                 .setImageClass("xui-icon-xui")
-                .onClick("_log_in_onclick")
+                .onClick([
+                    {
+                        "desc":"Action 1",
+                        "type":"page",
+                        "target":"App.LoggedIn",
+                        "args":[true],
+                        "method":"switch",
+                        "event":1
+                    },
+                    "_log_in_onclick"
+                ])
                 .setCustomStyle({
                     "KEY":{
                         "color":"#0000FF"
